@@ -1,0 +1,30 @@
+/* pages/form/form.wxss */
+.container{
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+view{
+  padding: 5px 0px;
+}
+.btn{
+  float: right;
+  margin: 0 10px;
+}
+.checkbox-lable{
+  float: left;
+  margin: 2px 5px;
+}
+.clear{
+  clear: both;
+}
+.input{
+  width: 95%;
+  height: 30px;
+  color: #010101;
+  border-bottom: 1px solid #0101014d;
+  margin: 5px 0px;
+}
+.radio-lable{
+  margin: 5px;
+}

@@ -1,0 +1,30 @@
+<view class="container">
+  <form>
+    <view>
+      <button class="btn" type="primary" form-type="submit">提交</button>
+      <button class="btn" type="warn" form-type="reset">重置</button>
+    </view>
+    <view class="clear"></view>
+    <view>
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox-lable" wx:for="{{countryList}}" wx:key="item">
+          <checkbox value="{{item.value}}" checked="{{item.checked}}">{{item.name}}</checkbox>
+        </label>
+      </checkbox-group>
+    </view>
+    <view>
+      <input class="input" type="text" value="" placeholder="用户名" />
+      <input class="input" type="password" value="" placeholder="密码" />
+      <input class="input" type="number" value="" placeholder="手机号码" />
+      <input class="input" type="idcard" value="" placeholder="身份证号码" />
+      <input class="input" type="digit" value="" placeholder="身高（米）" />
+    </view>
+    <view>
+    <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio-lable" wx:for="{{sexList}}" wx:key="item">
+    <radio value="{{item.value}}" checked="{{item.checked}}">{{item.name}}</radio>
+    </label>
+    </radio-group>
+    </view>
+  </form>
+</view>
