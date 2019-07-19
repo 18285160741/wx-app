@@ -1,13 +1,27 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+      <image src="{{item}}" class="slide-img"></image>
+      </swiper-item>
     </block>
+  </swiper>
+  <view class="top">
+    <map class="map">
+    </map>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <movable-area class="mov-area">
+    可拖动滑块
+    <movable-view class="mov-view" direction="{{mov.direction}}" inertia="{{mov.inertia}}" out-of-bounds="{{mov.inertia}}" x="{{mov.x}}" y="{{mov.y}}" damping="{{mov.damping}}" friction="{{mov.friction}}">
+    </movable-view>
+  </movable-area>
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">move</button>
   </view>
+  <scroll-view class="midle" scroll-y scroll-with-animation="true">
+    <view class="scroll-item scroll-item1">滚动条目1</view>
+    <view class="scroll-item scroll-item2">滚动条目2</view>
+    <view class="scroll-item scroll-item3">滚动条目3</view>
+  </scroll-view>
 </view>
