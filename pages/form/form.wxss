@@ -3,6 +3,7 @@
   margin: 0px;
   padding: 0px;
   border: none;
+  background-color: #EFEFEF;
 }
 view{
   padding: 5px 0px;
