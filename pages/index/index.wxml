@@ -3,7 +3,7 @@
   <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key="item">
       <swiper-item>
-      <image src="{{item}}" class="slide-img"></image>
+        <image src="{{item}}" class="slide-img"></image>
       </swiper-item>
     </block>
   </swiper>
@@ -24,4 +24,7 @@
     <view class="scroll-item scroll-item2">滚动条目2</view>
     <view class="scroll-item scroll-item3">滚动条目3</view>
   </scroll-view>
+  <view>
+    <navigator url="/pages/form/form" open-type="switchTab">切换到表单</navigator>
+  </view>
 </view>

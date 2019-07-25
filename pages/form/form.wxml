@@ -1,54 +1,54 @@
 <view class="container">
   <form>
-    <view>
+    <view class="view">
       <button class="btn" type="primary" form-type="submit">提交</button>
       <button class="btn" type="warn" form-type="reset">重置</button>
     </view>
     <view class="clear"></view>
-    <view>
+    <view class="view">
       <checkbox-group bindchange="checkboxChange">
         <label class="checkbox-lable" wx:for="{{countryList}}" wx:key="item">
           <checkbox value="{{item.value}}" checked="{{item.checked}}">{{item.name}}</checkbox>
         </label>
       </checkbox-group>
     </view>
-    <view>
+    <view class="view">
       <input class="input" type="text" value="" placeholder="用户名" />
       <input class="input" type="password" value="" placeholder="密码" />
       <input class="input" type="number" value="" placeholder="手机号码" />
       <input class="input" type="idcard" value="" placeholder="身份证号码" />
       <input class="input" type="digit" value="" placeholder="身高（米）" />
     </view>
-    <view>
+    <view class="view">
       <radio-group class="radio-group" bindchange="radioChange">
         <label class="radio-lable" wx:for="{{sexList}}" wx:key="item">
           <radio value="{{item.value}}" checked="{{item.checked}}">{{item.name}}</radio>
         </label>
       </radio-group>
     </view>
-    <slider bindchange="sliderChange" step="2" show-value min="0" max="1000" />
-    <view>
+    <view class="view">
+      <slider bindchange="sliderChange" step="2" show-value min="0" max="1000" />
     </view>
-    <view>
+    <view class="view">
       <switch bindchange="switchChange" />
     </view>
-    <view>
+    <view class="view">
       <textarea bindinput="textareaInput" placeholder="多行文本框" auto-height></textarea>
     </view>
     <!-- 普通选择器 -->
-    <view>
+    <view class="view">
       <picker bindchange="selectorChange" range="{{pickerRangeSelector}}" value="{{index}}" range-key="name">
         <view>{{pickerRangeSelector[index].name}}</view>
       </picker>
     </view>
     <!-- 多列选择器 -->
-    <view>
+    <view class="view">
       <picker bindchange="multiSelectorChange" mode="multiSelector" range="{{pickerRangeMultiselecor}}" value="{{multiIndex}}">
         <view>{{pickerRangeMultiselecor[0][multiIndex[0]]}} {{pickerRangeMultiselecor[1][multiIndex[1]]}} {{pickerRangeMultiselecor[2][multiIndex[2]]}}</view>
       </picker>
     </view>
     <!-- 日期选择器 -->
-    <view>
+    <view class="view">
       <picker bindchange="dateSelectorChange" mode="date" start="1992-01-01" end="2000-12-12" value="{{date}}">
         <view>
           {{date}}
@@ -56,7 +56,7 @@
       </picker>
     </view>
     <!-- 时间选择器 -->
-    <view>
+    <view class="view">
       <picker bindchange="timeSelectorChange" mode="time" start="09:00" end="18:00" value="{{time}}">
         <view>
           {{time}}
@@ -64,23 +64,23 @@
       </picker>
     </view>
     <!-- 省市区选择器 -->
-    <view>
+    <view class="view">
       <picker bindchange="regionSelectorChange" mode="region" value="{{region}}" custom-item="{{customItem}}">
         <view>{{region[0]}} {{region[1]}} {{region[2]}}</view>
       </picker>
     </view>
     <!-- 嵌入页面的滚动选择器 -->
-    <view>
+    <view class="view">
       <view>{{year}}年{{month}}月{{day}}日</view>
-      <picker-view bindchange="pickerviewChange" style="width:100%; height:300px" value="{{value}}">
+      <picker-view bindchange="pickerviewChange" indicator-style="height:30px; line-height:30px;" style="width:100%; height:300px" value="{{value}}">
         <picker-view-column>
-          <view wx:for="{{years}}" wx:key="item" style="line-height:30px">{{item}}年</view>
+          <view wx:for="{{years}}" wx:key="item" style="line-height:30px;">{{item}}年</view>
         </picker-view-column>
         <picker-view-column>
-          <view wx:for="{{months}}" wx:key="item" style="line-height:30px">{{item}}月</view>
+          <view wx:for="{{months}}" wx:key="item" style="line-height:30px;">{{item}}月</view>
         </picker-view-column>
         <picker-view-column>
-          <view wx:for="{{days}}" wx:key="item" style="line-height:30px">{{item}}日</view>
+          <view wx:for="{{days}}" wx:key="item" style="line-height:30px;">{{item}}日</view>
         </picker-view-column>
       </picker-view>
     </view>

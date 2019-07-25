@@ -84,12 +84,12 @@ Page({
     customItem:"请选择",
 
     years: years,
-    year: date.getFullYear(),
+    year: years[0],
     months: months,
-    month: 2,
+    month: months[0],
     days: days,
-    day: 2,
-    value: [9999, 1, 1]
+    day: days[0],
+    value: [0, 0, 0]
   },
   checkboxChange: function(e) {
     console.log(e.detail);

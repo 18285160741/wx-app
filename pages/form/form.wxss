@@ -5,7 +5,7 @@
   border: none;
   background-color: #EFEFEF;
 }
-view{
+.view{
   padding: 5px 0px;
 }
 .btn{
