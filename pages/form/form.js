@@ -78,10 +78,10 @@ Page({
       ['猪肉绦虫', '吸血虫']
     ],
     multiIndex: [0, 0, 0],
-    date:"1998-06-06",
-    time:"10:12",
-    region:["贵州省","贵阳市","观山湖区"],
-    customItem:"请选择",
+    date: "1998-06-06",
+    time: "10:12",
+    region: ["贵州省", "贵阳市", "观山湖区"],
+    customItem: "请选择",
 
     years: years,
     year: years[0],
@@ -112,31 +112,31 @@ Page({
     });
     console.log(e.detail);
   },
-  multiSelectorChange: function(e){
+  multiSelectorChange: function(e) {
     this.setData({
-      multiIndex:e.detail.value
+      multiIndex: e.detail.value
     });
     console.log(e.detail);
   },
-  dateSelectorChange: function(e){
+  dateSelectorChange: function(e) {
     this.setData({
-      date:e.detail.value
+      date: e.detail.value
     });
     console.log(e.detail);
   },
-  timeSelectorChange: function(e){
+  timeSelectorChange: function(e) {
     this.setData({
-      time:e.detail.value
+      time: e.detail.value
     });
     console.log(e.detail);
   },
-  regionSelectorChange:function(e){
+  regionSelectorChange: function(e) {
     this.setData({
-      region:e.detail.value
+      region: e.detail.value
     });
     console.log(e.detail);
   },
-  pickerviewChange: function (e) {
+  pickerviewChange: function(e) {
     const val = e.detail.value
     this.setData({
       year: this.data.years[val[0]],
@@ -144,6 +144,21 @@ Page({
       day: this.data.days[val[2]]
     });
     console.log(e.detail);
+  },
+  // 接口调用
+  submit: function(e) {
+    console.log(e.detail.value);
+    wx.request({
+      url: 'http://192.168.11.30:8080/user/operation',
+      data: JSON.stringify(e.detail.value),
+      method: 'POST',
+      header: {
+        'Content-Type': 'application/json;charset=utf-8'
+      },
+      success: function(res) {
+        console.log(res);
+      }
+    })
   }
 
 

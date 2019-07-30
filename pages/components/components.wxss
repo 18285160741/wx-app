@@ -1,1 +1,6 @@
 /* pages/components/components.wxss */
+
+.btn{
+  float: left;
+  margin: 0 5px;
+}
