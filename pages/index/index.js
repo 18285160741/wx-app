@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+const util = require('../../utils/util.js')
 Page({
   data: {
     indicatorDots:true,
@@ -23,7 +23,7 @@ Page({
       friction:2      // 摩擦系数
     }
   },
-  tap: function(e){
+  tap: function (e) {
     this.setData({
       mov:{
         x: 300,

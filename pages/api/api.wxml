@@ -1,0 +1,5 @@
+<view class="container">
+<view>
+<button bindtap="systemInfo">系统信息</button>
+</view>
+</view>

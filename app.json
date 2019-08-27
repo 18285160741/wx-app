@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/form/form",
     "pages/logs/logs",
-    "pages/components/components"
+    "pages/components/components",
+    "pages/api/api"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,6 +21,10 @@
       {
         "pagePath": "pages/form/form",
         "text": "表单"
+      },
+      {
+        "pagePath": "pages/api/api",
+        "text": "API"
       },
       {
         "pagePath": "pages/components/components",
